@@ -29,7 +29,7 @@ void insertattail(linklist *&tail, int data)
     linklist *temp = new linklist(data);
 
     tail->next = temp;
-    tail = tail->next;
+    tail = tail->next;      // or it can be written as tail=temp
 }
 void print(linklist *&temp)
 {
@@ -68,4 +68,5 @@ int main()
     print(b);
 
     return 0;
+
 }
