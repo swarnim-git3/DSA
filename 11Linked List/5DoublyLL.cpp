@@ -12,7 +12,7 @@ public:
     // constructor
     link(int n)
     {
-        data = n; /// this is used when the name of member variable is same as parameter
+        data = n; // " this-> " is used when the name of member variable is same as parameter
         next = NULL;
         prev = NULL;
     }
@@ -162,4 +162,5 @@ int main()
     print(head);
 
     return 0;
+
 }
