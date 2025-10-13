@@ -67,17 +67,16 @@ void print(link *&temp)
 int main()
 {
 
-    link *a1 = new link(5);
+    link *a1 = new link(8);
 
     link *head = a1;
 
-    insertathead(head, 6);
-    insertathead(head, 7);
     insertathead(head, 7);
     insertathead(head, 9);
+    insertathead(head, 7);
+    insertathead(head, 10);
     print(head);
     removedupli(head);
     print(head);
     return 0;
 }
-//ande  ka fanda
