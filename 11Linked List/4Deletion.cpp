@@ -74,12 +74,12 @@ void insertinmiddle(a *&head, a *&tail, int position, int data)
     temp->next = insertnode;
 }
 
-void print(a *yemp)
+void print(a *temp)
 {
-    while (yemp != NULL) // yemp->next will not print the last element
+    while (temp != NULL) // of we write temp->next then it will not print the last element
     {
-        cout << yemp->data << " ";
-        yemp = yemp->next;
+        cout << temp->data << " ";
+        temp = temp->next;
     }
 }
 
@@ -88,25 +88,25 @@ void deletion(a *&head, int position)
     // deleting start node or first node
     if (position == 1)
     {
-        cout << "hello" << endl;
+    
 
         a *temp = head;
         head = head->next;
 
         // freeing the memory by calling destructor
-        temp->next = NULL;
+        temp->next = NULL;     //node ko detach kro phir delete kro
         delete temp;
         return;
     }
 
     else
     {
-        cout << "hello2" << endl;
+    
         a *curr = head;
         a *prev = NULL;
 
         int cnt = 1;
-        while (cnt < position) // do understand this part
+        while (cnt < position) // hume curr ko uss node p point karwana hai jiss node ko delete krna hai isiliye -1 nahi hai
         {
             prev = curr;
             curr = curr->next;
@@ -114,7 +114,7 @@ void deletion(a *&head, int position)
         }
 
         prev->next = curr->next;
-        curr->next = NULL;
+        curr->next = NULL; // node ko sabse detach krke hi delete krna hota hai
         delete curr;
         return;
     }
@@ -143,4 +143,5 @@ int main()
     print(hello);
 
     return 0;
+
 }

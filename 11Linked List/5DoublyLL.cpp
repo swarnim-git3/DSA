@@ -12,7 +12,7 @@ public:
     // constructor
     link(int n)
     {
-        data = n; /// this is used when the name of member variable is same as parameter
+        data = n; // " this-> " is used when the name of member variable is same as parameter
         next = NULL;
         prev = NULL;
     }
@@ -29,7 +29,7 @@ public:
         int value = this->data;
         if (next != NULL)
         {
-            delete next;
+            delete next;      // pehle delete kroge uske baad NULL assign kroge vrna poori linkedlist ka track loose ho jayega 
             next = NULL;
         }
         cout << "memory is free for node with data " << value << endl;
@@ -162,4 +162,6 @@ int main()
     print(head);
 
     return 0;
+
 }
+

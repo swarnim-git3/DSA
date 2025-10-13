@@ -29,15 +29,15 @@ void insertattail(linklist *&tail, int data)
     linklist *temp = new linklist(data);
 
     tail->next = temp;
-    tail = tail->next;
+    tail = tail->next;      // or it can be written as tail=temp
 }
-void print(linklist *&temp)
+void print(linklist *&head)
 {
-    linklist *head = temp;
-    while (head != NULL)
+    linklist *temp = head;
+    while (temp != NULL)
     {
-        cout << head->data << " ";
-        head = head->next;
+        cout << temp->data << " ";
+        head = temp->next;
     }
     cout << endl;
 }
@@ -68,4 +68,6 @@ int main()
     print(b);
 
     return 0;
+
 }
+

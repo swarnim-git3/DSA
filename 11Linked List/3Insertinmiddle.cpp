@@ -40,7 +40,7 @@ void insertinmiddle(link *&tail, link *&head, int position, int data)
     int cnt = 1;
 
     
-    while (cnt < position - 1)
+    while (cnt < position - 1)   // it will run fine no error will occur
     {
         temp = temp->next;
         cnt++;
@@ -90,4 +90,5 @@ int main()
     cout << "head is " << head << endl;
     cout << "tail is " << tail << endl;
     return 0;
+
 }
