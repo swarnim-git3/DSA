@@ -20,7 +20,7 @@ public:
     // link(int n)
     // {
     //     this->data = n;
-    //     this->next = NULL;                 //in this xase this is not required because the name of parameter and member varoable is different
+    //     this->next = NULL;                 //in this case this is not required because the name of parameter and member varoable is different
     //     this->prev = NULL;
     // }
 

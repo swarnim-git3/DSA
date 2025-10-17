@@ -72,3 +72,23 @@ int main()
     cout << counting(a);
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
