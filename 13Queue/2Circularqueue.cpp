@@ -54,27 +54,15 @@ public:
         {
             dfront = 0;
         }
-        // int ans = arr[dfront];
-        else if (dfront == rear)
-        {
-            dfront = rear = -1;
-        }
+
         else
         {
             dfront++;
         }
     }
-    int top()
-    {
-    }
-
-    bool isempty()
-    {
-    }
 };
-
 int main()
-{
+{ // yaha pe input d dena
 
     return 0;
 }
