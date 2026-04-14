@@ -20,7 +20,7 @@ public:
     }
     void sethealth(int h /*, string password*/) // you can also set the password     for example
     {
-        /*if (password == "heeded") // by writing this condtition only person woth the poassword can access
+        /*if (password == "heeded") // by writing this condition only person with the poassword can access
         {*/
         health = h;
         // }

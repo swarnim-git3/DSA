@@ -11,7 +11,7 @@ public:
     char level;
     char *name;
 //default constructor
-    hero()             /// this follows shallow copy 
+    hero()             // this follows shallow copy 
     {
         cout << "default constructor" << endl;
         name = new char[100];
@@ -23,7 +23,7 @@ public:
     }
 
     // Copy Constructor
-    hero(hero &temp) // this folllow deep copy which means it will assign a new memory to the value to avoid any eror
+    hero(hero &temp) // this follow deep copy which means it will assign a new memory to the value to avoid any error
     {
         cout << "copy called" << endl;
         this->health = temp.health;

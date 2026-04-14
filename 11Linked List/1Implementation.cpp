@@ -8,7 +8,7 @@ public:
     int data;
 
     node *next;     //pointer is used because next contains address
-    // constructor use in LL
+    // constructor use in Linked List
       node(int data)
     {
         this->data = data;
