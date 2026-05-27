@@ -44,7 +44,7 @@ char getchar(string s)
 
 int main()
 {
-    string a = "ab  acv  c";
+    string a = "ab  acccv  c";
     cout << getchar(a);
 
     return 0;

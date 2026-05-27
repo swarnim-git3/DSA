@@ -1,12 +1,12 @@
 
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-
-//time complexity O(n*log(log n))
-// this is the best running code
-//Also known as SIEVE of ERATOSTHENES
+// time complexity O(n*log(log n))
+//  this is the best running code
+// Also known as SIEVE of ERATOSTHENES
 int countPrimes(int n)
 {
     if (n <= 2)
@@ -33,8 +33,6 @@ int countPrimes(int n)
     }
     return count;
 }
-
-
 
 // this is written by me
 bool prime(int n)
@@ -72,23 +70,3 @@ int main()
     cout << counting(a);
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

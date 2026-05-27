@@ -31,9 +31,9 @@ void reorder(int arr[], int m)
 
 int main()
 {
-    int arr[7] = {3, 0, 0, 5, 7, 0, 0};
+    int arr[5] = {3, 5, 0, 7, 0};
 
-    reorder(arr, 7);
+    reorder(arr, 5);
 
     return 0;
 }

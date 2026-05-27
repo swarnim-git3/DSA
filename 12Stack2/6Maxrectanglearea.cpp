@@ -1,3 +1,4 @@
+// understand 7th of stack2 before understanding this
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -12,6 +13,7 @@ private:
     {
         stack<int> st;
         st.push(-1); // -1 means no smaller element on right
+                     //  stack me -1 isliye input kiya ki hume idea rhe ki kb khtm ho rha h stack
         vector<int> ans(n);
 
         for (int i = 0; i < n; i++)
@@ -75,10 +77,10 @@ private:
     }
 
 public:
-    int findarea(int rect[4][4], int n, int m)
+    int findarea(int rect[6][6], int n, int m)
     {
 
-        // compute area for yhe first row
+        // compute area for the first row
         int area = largestarea(rect[0], m);
         for (int i = 1; i < n; i++)
         {
@@ -95,7 +97,7 @@ public:
                     rect[i][j] = 0;
                 }
             }
-            // entire row is updates now;
+            // entire row is updated now;
             area = max(area, largestarea(rect[i], m));
         }
         return area;
@@ -104,10 +106,10 @@ public:
 
 int main()
 {
-    int rect[4][4] = {{0, 1, 1, 0}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 0, 0}};
+    int rect[6][6] = {{1, 1, 0, 0, 0, 0}, {1, 0, 0, 0, 0, 0}, {1, 1, 1, 1, 1, 0}, {1, 1, 1, 1, 1, 1}, {1, 1, 0, 0, 0, 0}, {1, 1, 1, 0, 0, 0}};
 
     area a1;
-    cout << "The largest area of the rectangle is " << a1.findarea(rect, 4, 4);
+    cout << "The largest area of the rectangle is " << a1.findarea(rect, 6, 6);
 
     return 0;
 }
