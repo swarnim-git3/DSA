@@ -39,32 +39,44 @@ node *buildtree(node *root) // writing both the node* root and node *root are sa
     root->right = buildtree(root->right);
 }
 
+
+//levelordertraversal traverse the tree level by level like it prints or do anyrhing but will do it by level
 void levelordertraversal(node *root) // it works on level  like level 0 level 1 level 2
 {
     queue<node *> q;         // here the queue is node type because  we need the address to access the child nodes otherwise the values cannot be accessed 
     q.push(root);              // only 1 will be pushed in queue and then null is pushed 
     q.push(NULL); // we are pushing the null because first level is complete
+
+
+
+
     while (!q.empty())        // pehla null enter hone ke baad queue me baki ke null and entries jo queue me hongi vo while loop manage krega level wise
     {
         node *temp = q.front();
        
         q.pop();
 
+
         if (temp == NULL)
         {
             cout << endl;
+
             if (!q.empty())
             {
                 q.push(NULL);
             }
         }
+
+
         else
         {
              cout << temp->data << " ";
+
             if (temp->left) // this is written because if there is any element present in the left side of the root then the condition is right else not
             {
                 q.push(temp->left);
             }
+            
             if (temp->right)
             {
                 q.push(temp->right);
